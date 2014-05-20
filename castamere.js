@@ -2,7 +2,7 @@
 
 angular.module('carbon.castamere', ['ui.router'])
     .config(function($stateProvider) {
-        $stateProvider.state('castamere-home', {
+        $stateProvider.state('castamereHome', {
         	url: '/castamere',
             templateUrl: 'carbon_components/castamere/main.html',
             controller: 'castamereCtrl',
