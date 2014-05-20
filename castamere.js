@@ -13,6 +13,17 @@ angular.module('carbon.castamere', ['ui.router'])
             }
         });
     })
-    .controller('castamereCtrl', function ($scope) {
+    .controller('castamereCtrl', function ($scope, Ned) {
         $scope.verse = 'And now the rains weep o\'er his hall and not a soul to hear.';
+
+        Ned.saySomething().success(function (data) {
+            $scope.nedSays = data.message;
+        });
+    })
+    .service('Ned', function ($http) {
+        return {
+            saySomething: function () {
+                return $http.get('https://api.myjson.com/bins/2dcjp');
+            }
+        };
     });
