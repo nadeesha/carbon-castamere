@@ -1,5 +1,8 @@
 'use strict';
 
+// resgister the modules in carbon ui
+carbon.modules.push('carbon.castamere');
+
 angular.module('carbon.castamere', ['ui.router'])
     .config(function($stateProvider) {
         $stateProvider.state('castamereHome', {
